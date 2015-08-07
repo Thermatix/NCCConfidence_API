@@ -2,8 +2,7 @@ require "curb"
 
 module NCCConfidence
 	class Http
-		class << self
-		
+		class << self	
 
 			def request  &scipt
 				t = self.new
@@ -12,6 +11,7 @@ module NCCConfidence
 			end
 
 		end
+		
 		attr_accessor :curl, :headers,:payload, :username, :password, :auth_type, :uri, :ssl, :redirects
 		[:get, :post, :put, :delete, :head, :options, :patch, :link, :unlink].each do |func_name|
 			define_method func_name do 

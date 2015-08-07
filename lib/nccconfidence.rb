@@ -1,4 +1,3 @@
-require 'rest-client'
 require 'json'
 lib_root = File.expand_path('.',File.dirname(__FILE__))
 
