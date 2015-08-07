@@ -58,39 +58,6 @@ puts result
 
 ```
 
-You can even store the filter blocks as `Procs` and pass them to the query block like this:
-
-```ruby
-
-t_filter = Proc.new do
-     account_id "BN5A64933"
-    id "MA2PG72611"
-    start_date "2015-08-12"
-    start_time "12:00:00"
-    end_date "2015-08-07"
-    end_time "07:05:05"
-    status_code 1
-end
-
-d_filter = Proc.new do
-    object "Account" do
-        item "AccountId"
-        object "Pages" do 
-            item "Page"
-        end
-        object "ServiceStatus" do 
-            item "HighestStatusCode"
-        end
-    end
-end
-
-result = NCCConfidence.query do |test_filter,data_filter|
-    [test_filter.make(&t_filter),data_filter.make(&d_filter)]
-end
-puts result
-```
-
-That way you can make them re-usable or make the query easily changable by just switching which Procs you provide.
 
 Please note you have to put both test_filter & data_filter into an array otherwise the client will only get one of the filters instead of an array of two two filters.
 
