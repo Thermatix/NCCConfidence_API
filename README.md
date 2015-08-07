@@ -94,6 +94,45 @@ That way you can make them re-usable or make the query easily changable by just 
 
 Please note you have to put both test_filter & data_filter into an array otherwise the client will only get one of the filters instead of an array of two two filters.
 
+Lastly you can use the query builder to build and make queries more easily.
+
+```ruby
+    NCCConfidence::Query.make "test_query" do 
+        test_filter do
+            account_id "MN2A6933"
+            id "MN2PG30601"
+            start_date "2015-08-12"
+            start_time "12:00:00"
+            end_date "2015-08-07"
+            end_time "07:05:05"
+            status_code 1
+        end
+
+        data_filter do
+            object "Account" do
+                item "AccountId"
+                object "Pages" do 
+                    item "Page"
+                end
+                object "ServiceStatus" do 
+                    item "HighestStatusCode"
+                end
+            end
+        end
+    end
+```
+
+To run all the queries do this
+```ruby
+result = NCCConfidence.query 
+```
+
+or to run a single query do this
+
+```ruby
+result = NCCConfidence.query NCCConfidence::Query.queries["test_query"] 
+```
+
 Here's a list of possible test filters:
 + account_id
 + id

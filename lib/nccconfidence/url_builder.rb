@@ -4,6 +4,9 @@ require "#{nccc_root}/test_builder"
 
 require "#{nccc_root}/data_filters"
 require "#{nccc_root}/data_builder"
+
+require "#{nccc_root}/query_builder"
+
 module NCCConfidence
 	class URL
 		class << self
