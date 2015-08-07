@@ -7,6 +7,6 @@
 /pkg/
 /spec/reports/
 /tmp/
-test*
+test.rb
 /test
 *.gem
