@@ -1,4 +1,4 @@
-nccc_root = "#{$lib_root}/nccconfidence"
+nccc_root = File.expand_path('.',File.dirname(__FILE__))
 require "#{nccc_root}/test_filters"
 require "#{nccc_root}/test_builder"
 

@@ -1,11 +1,11 @@
 require 'rest-client'
 require 'json'
-$lib_root = File.expand_path('.',File.dirname(__FILE__))
+lib_root = File.expand_path('.',File.dirname(__FILE__))
 
 
-require "#{$lib_root}/nccconfidence/version"
-require "#{$lib_root}/nccconfidence/url_builder"
-require "#{$lib_root}/nccconfidence/http_client"
+require "#{lib_root}/nccconfidence/version"
+require "#{lib_root}/nccconfidence/url_builder"
+require "#{lib_root}/nccconfidence/http_client"
 
 
 module NCCConfidence
