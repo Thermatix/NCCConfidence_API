@@ -57,7 +57,7 @@ end
 puts result
 
 ```
-Please note you have to put both test_filter & data_filter into an array otherwise the client will only one of the filters instead of an array of two two filters.
+Please note you have to put both test_filter & data_filter into an array otherwise the client will only get one of the filters instead of an array of two two filters.
 
 Here's a list of possible test filters:
 + account_id
