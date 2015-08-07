@@ -21,8 +21,28 @@ Or install it yourself as:
     $ gem install NCCConfidence
 
 ## Usage
+```ruby
+data_filter = [
+    {
+        book: [
+            { pages:[
+                    :page_number,
+                    {page_meta: 
+                        [
+                            :description,
+                            :author,
+                            :page_name
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
 
-TODO: Write usage instructions here
+build(f)
+    #=>[book[pages[page_number,page_meta[description,author,page_name]]]]
+```
 
 ## Development
 
