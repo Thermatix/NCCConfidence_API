@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "addressable" , "2.3.8"
-  spec.add_runtime_dependency "curb"        , "0.88"
+  spec.add_runtime_dependency "curb"        , "0.8.8"
   spec.add_runtime_dependency "json"        , "1.8.3"
 
   spec.add_development_dependency "bundler", "~> 1.9"
