@@ -22,7 +22,6 @@ module NCCConfidence
 
  		private 
  			def make_request request
- 				puts request[:url]
  				http = Http.request do
  					set_uri request[:url]
  				end
