@@ -1,11 +1,9 @@
-require "addressable/uri"
-require "addressable/template"
-# require 'uri'
-require_relative 'test_filters'
-require_relative 'test_builder'
+nccc_root = "#{$lib_root}/nccconfidence"
+require "#{nccc_root}/test_filters"
+require "#{nccc_root}/test_builder"
 
-require_relative 'data_filters'
-require_relative 'data_builder'
+require "#{nccc_root}/data_filters"
+require "#{nccc_root}/data_builder"
 module NCCConfidence
 	class URL
 		class << self
@@ -15,7 +13,7 @@ module NCCConfidence
 				t_filter = test_filters.class == String ? test_filters : T_Filters.build(test_filters)
 				d_filter = data_filters.class == String ? data_filters : D_Filters.build(data_filters)	
 				
-				URI.encode("#{Base}/#{self.api_key}/Return/#{d_filter}#{t_filter}")
+				"#{Base}/#{self.api_key}/Return/#{d_filter}#{t_filter}"
 			end	
 		end
 	end
