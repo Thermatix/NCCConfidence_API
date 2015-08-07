@@ -51,7 +51,7 @@ result = NCCConfidence.query do |test_filter,data_filter|
                 item "HighestStatusCode"
             end
         end
-    end
+    end]
 
 end
 puts result
